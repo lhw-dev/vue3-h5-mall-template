@@ -33,7 +33,6 @@ export const goodsHandlers = [
   // 商品列表接口
   http.get("/api/goods/list", async ({ request }) => {
     const url = new URL(request.url);
-    const page = Number(url.searchParams.get("page")) || 1;
     const pageSize = Number(url.searchParams.get("pageSize")) || 10;
     return HttpResponse.json({
       code: 200,

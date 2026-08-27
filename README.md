@@ -124,9 +124,8 @@ pnpm typecheck     # TypeScript 类型检查
 ```
 ├── public/                    # 静态资源
 ├── src/
-│   ├── api/                   # ofetch请求封装、接口模块、TS类型
+│   ├── api/                   # 接口模块
 │   │   ├── modules/           # 各业务api：goods / cart / user
-│   │   └── request.ts         # ofetch完整实例封装
 │   ├── assets/               # 图片、字体、SVG 图标
 │   │   └── icons/           # SVG 图标目录
 │   ├── components/           # 组件
@@ -215,25 +214,25 @@ src/views/order/list.vue   -> 路由: /order/list
 <script setup lang="ts">
 // 登录页面使用空白布局，不渲染底部TabBar
 definePageMeta({
-  layout: "BlankLayout",
-});
+  layout: 'BlankLayout',
+})
 </script>
 ```
 
 ### 2. Pinia 状态 + 持久化
 
 ```typescript
-import { useUserStore } from "@/stores/user";
-const userStore = useUserStore();
+import { useUserStore } from '@/stores/user'
+const userStore = useUserStore()
 // persist:true开启持久化存储到localStorage
 ```
 
 ### 3. ofetch 请求封装
 
 ```vue
-- 统一拦截请求，自动注入 token - 相同请求 key 做 AbortController 取消重复请求 -
-业务 code 非 200 统一 toast 提示；401 登录过期自动跳转登录，携带 redirect
-回跳地址 - 区分业务错误、网络错误、手动取消请求三种 error type
+- 统一拦截请求，自动注入 token - 相同请求 key 做 AbortController 取消重复请求 - 业务 code 非 200
+统一 toast 提示；401 登录过期自动跳转登录，携带 redirect 回跳地址 -
+区分业务错误、网络错误、手动取消请求三种 error type
 ```
 
 ### 4. Mock 数据（MSW）
@@ -253,10 +252,10 @@ http.get('/api/goods/list', () => {
 ### 5. 深色模式
 
 ```typescript
-import { useGlobalStore } from "@/stores";
+import { useGlobalStore } from '@/stores'
 
-const globalStore = useGlobalStore();
-globalStore.toggleTheme(); // 切换 light/dark
+const globalStore = useGlobalStore()
+globalStore.toggleTheme() // 切换 light/dark
 ```
 
 通过 CSS 变量实现，所有颜色使用 `var(--color-*)`：

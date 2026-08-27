@@ -2,11 +2,7 @@
   <div class="home-page">
     <!-- 顶部搜索栏 -->
     <div class="home-search-wrap">
-      <van-search
-        readonly
-        placeholder="搜索商品"
-        @click="$router.push('/search')"
-      />
+      <van-search readonly placeholder="搜索商品" @click="$router.push('/search')" />
     </div>
 
     <!-- 轮播图 -->
@@ -72,111 +68,113 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-import { useHttp } from "@/api/request";
-import type { GoodsItem } from "@/api/goods";
-import { useRouter } from "vue-router";
-const router = useRouter();
-const { get } = useHttp();
-const goodsList = ref<GoodsItem[]>([]);
-
-interface GoodsListResp {
-  code: number;
-  msg: string;
-  data: {
-    list: GoodsItem[];
-    total: number;
-  };
-}
+import { ref, onMounted } from 'vue'
+import type { GoodsItem } from '@/types/goods'
+import { getGoodsListApi } from '@/api/goods'
+import { useRouter } from 'vue-router'
+const router = useRouter()
+const goodsList = ref<GoodsItem[]>([])
 
 // 跳商品详情
 const goDetail = (id: number) => {
-  router.push(`/goods/${id}`);
-};
+  router.push(`/goods/${id}`)
+}
 
 onMounted(async () => {
   try {
-    // 泛型传完整响应类型 GoodsListResp
-    const res = await get<GoodsListResp>("/api/goods/list", {
+    const res = await getGoodsListApi({
       page: 1,
       pageSize: 10,
-    });
-    goodsList.value = res.data.list;
-    console.log("首页商品数据", res);
+    })
+    console.log('首页商品数据', res)
+    goodsList.value = res.data.list
   } catch (err) {
-    console.error("首页商品加载失败", err);
+    console.error('首页商品加载失败', err)
   }
-});
+})
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+$color-bg-page: #f7f8fa;
+$radius-base: 10px;
+$padding-page: 12px;
+$banner-height: 180px;
+
 .home-page {
-  background-color: #f7f8fa;
+  background-color: $color-bg-page;
   min-height: 100%;
   padding-bottom: 10px;
 }
 
-/* 搜索栏 */
+// 搜索栏
 .home-search-wrap {
   background: linear-gradient(135deg, #ff5050, #ff7849);
-  padding: 10px 14px 14px;
+  padding: 10px $padding-page 14px;
 }
 
-/* 轮播图 */
+// 轮播图
 .home-swipe {
-  height: 180px;
+  height: $banner-height;
 }
+
 .banner-item {
   width: 100%;
-  height: 180px;
+  height: $banner-height;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-size: 20px;
   font-weight: 600;
-}
-.banner-1 {
-  background: linear-gradient(120deg, #ff7a7a, #ff4444);
-}
-.banner-2 {
-  background: linear-gradient(120deg, #ffb354, #ff8800);
-}
-.banner-3 {
-  background: linear-gradient(120deg, #54a8ff, #247bff);
+
+  &.banner-1 {
+    background: linear-gradient(120deg, #ff7a7a, #ff4444);
+  }
+  &.banner-2 {
+    background: linear-gradient(120deg, #ffb354, #ff8800);
+  }
+  &.banner-3 {
+    background: linear-gradient(120deg, #54a8ff, #247bff);
+  }
 }
 
+// 功能入口
 .home-grid {
   background: #ffffff;
-  margin: 10px 12px;
-  border-radius: 10px;
+  margin: 10px $padding-page;
+  border-radius: $radius-base;
   padding: 8px 0;
 }
 
+// 模块标题
 .home-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 16px;
-}
-.title-text {
-  font-size: 17px;
-  font-weight: bold;
-  color: #222;
-}
-.more-text {
-  font-size: 13px;
-  color: #999;
+
+  .title-text {
+    font-size: 17px;
+    font-weight: bold;
+    color: #222;
+  }
+  .more-text {
+    font-size: 13px;
+    color: #999;
+  }
 }
 
+// 商品列表
 .goods-list {
-  padding: 4px 12px 20px;
+  padding: 4px $padding-page 20px;
+
+  .goods-card {
+    border-radius: $radius-base;
+    margin-bottom: 10px;
+    background-color: #fff;
+  }
 }
-.goods-card {
-  border-radius: 10px;
-  margin-bottom: 10px;
-  background-color: #fff;
-}
+
 :deep(.van-card__thumb) {
   border-radius: 8px;
 }
