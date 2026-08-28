@@ -1,12 +1,14 @@
-# Vue3 电商 H5 模板
+# 🛒 Vue3 H5 Mall Template
 
-> Vue3 + Vite6 + TypeScript + Vant4 + Pinia + ofetch 移动端H5垂直电商**工程骨架模板**
+> 🔥 **Vue3 + Vite6 + TS + Vant4 + Pinia + ofetch 开箱即用 垂直电商 H5 工程模板**
+> 不同于通用空模板，**内置完整电商业务 + 顶级工程化规范**，可直接用于商业二次开发 / 毕业设计 / 简历项目展示
 
 [![Vue3](https://img.shields.io/badge/Vue-3.5-green.svg)](https://vuejs.org/)
 [![Vite](https://img.shields.io/badge/Vite-6.0-646CFF.svg)](https://vitejs.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg)](https://www.typescriptlang.org/)
 [![Vant](https://img.shields.io/badge/Vant-4.9-07c160.svg)](https://vant-ui.github.io/)
 [![Pinia](https://img.shields.io/badge/Pinia-2.3-yellow.svg)](https://pinia.vuejs.org/)
+[![ofetch](https://img.shields.io/badge/ofetch-1.4-000000.svg)](https://github.com/unjs/ofetch)
 [![License](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 
 ## 在线预览
@@ -85,8 +87,8 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/yourname/vue3-h5-ecommerce.git
-cd vue3-h5-ecommerce
+git clone https://github.com/yourname/vue3-h5-mall-template.git
+cd vue3-h5-mall-template
 
 # 安装依赖
 pnpm install
