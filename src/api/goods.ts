@@ -10,5 +10,5 @@ export function getGoodsListApi(params: { categoryId?: number; page: number; pag
 
 // 商品详情
 export function getGoodsDetailApi(goodsId: number) {
-  return get<GoodsDetailType>('/api/goods/detail', { id: goodsId })
+  return get<{ data: GoodsDetailType }>('/api/goods/detail', { id: goodsId })
 }
