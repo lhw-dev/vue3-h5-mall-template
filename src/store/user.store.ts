@@ -1,32 +1,36 @@
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia'
 
 interface UserState {
-  token: string;
-  isLogin: false;
+  token: string
+  isLogin: Boolean
   userInfo: {
-    id?: number;
-    nickname?: string;
-    avatar?: string;
-  };
+    id?: number
+    nickname?: string
+    phone?: String
+    avatar?: string
+  }
 }
 
-export const useUserStore = defineStore("user", {
+export const useUserStore = defineStore('user', {
   state: (): UserState => ({
-    token: "",
-    userInfo: {},
+    token: '',
     isLogin: false,
+    userInfo: {},
   }),
   actions: {
     setToken(token: string) {
-      this.token = token;
+      this.token = token
+      this.isLogin = !!token
     },
-    setUserInfo(info: Partial<UserState["userInfo"]>) {
-      this.userInfo = { ...this.userInfo, ...info };
+
+    setUserInfo(info: Partial<UserState['userInfo']>) {
+      this.userInfo = { ...this.userInfo, ...info }
     },
     logoutAction() {
-      this.token = "";
-      this.userInfo = {};
+      this.token = ''
+      this.isLogin = false
+      this.userInfo = {}
     },
   },
   persist: true, // 开启持久化存储token和用户信息
-});
+})
