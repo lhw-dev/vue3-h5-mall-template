@@ -9,8 +9,10 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue').EffectScope
+  const acceptHMRUpdate: typeof import('pinia').acceptHMRUpdate
   const asyncComputed: typeof import('@vueuse/core').asyncComputed
   const autoResetRef: typeof import('@vueuse/core').autoResetRef
+  const closeToast: typeof import('vant').closeToast
   const computed: typeof import('vue').computed
   const computedAsync: typeof import('@vueuse/core').computedAsync
   const computedEager: typeof import('@vueuse/core').computedEager
@@ -23,6 +25,7 @@ declare global {
   const createEventHook: typeof import('@vueuse/core').createEventHook
   const createGlobalState: typeof import('@vueuse/core').createGlobalState
   const createInjectionState: typeof import('@vueuse/core').createInjectionState
+  const createPinia: typeof import('pinia').createPinia
   const createReactiveFn: typeof import('@vueuse/core').createReactiveFn
   const createRef: typeof import('@vueuse/core').createRef
   const createReusableTemplate: typeof import('@vueuse/core').createReusableTemplate
@@ -34,9 +37,11 @@ declare global {
   const debouncedWatch: typeof import('@vueuse/core').debouncedWatch
   const defineAsyncComponent: typeof import('vue').defineAsyncComponent
   const defineComponent: typeof import('vue').defineComponent
+  const defineStore: typeof import('pinia').defineStore
   const eagerComputed: typeof import('@vueuse/core').eagerComputed
   const effectScope: typeof import('vue').effectScope
   const extendRef: typeof import('@vueuse/core').extendRef
+  const getActivePinia: typeof import('pinia').getActivePinia
   const getCurrentInstance: typeof import('vue').getCurrentInstance
   const getCurrentScope: typeof import('vue').getCurrentScope
   const getCurrentWatcher: typeof import('vue').getCurrentWatcher
@@ -51,6 +56,11 @@ declare global {
   const isRef: typeof import('vue').isRef
   const isShallow: typeof import('vue').isShallow
   const makeDestructurable: typeof import('@vueuse/core').makeDestructurable
+  const mapActions: typeof import('pinia').mapActions
+  const mapGetters: typeof import('pinia').mapGetters
+  const mapState: typeof import('pinia').mapState
+  const mapStores: typeof import('pinia').mapStores
+  const mapWritableState: typeof import('pinia').mapWritableState
   const markRaw: typeof import('vue').markRaw
   const nextTick: typeof import('vue').nextTick
   const onActivated: typeof import('vue').onActivated
@@ -92,9 +102,19 @@ declare global {
   const refThrottled: typeof import('@vueuse/core').refThrottled
   const refWithControl: typeof import('@vueuse/core').refWithControl
   const resolveComponent: typeof import('vue').resolveComponent
+  const setActivePinia: typeof import('pinia').setActivePinia
+  const setMapStoreSuffix: typeof import('pinia').setMapStoreSuffix
   const shallowReactive: typeof import('vue').shallowReactive
   const shallowReadonly: typeof import('vue').shallowReadonly
   const shallowRef: typeof import('vue').shallowRef
+  const showConfirmDialog: typeof import('vant').showConfirmDialog
+  const showDialog: typeof import('vant').showDialog
+  const showFailToast: typeof import('vant').showFailToast
+  const showLoadingToast: typeof import('vant').showLoadingToast
+  const showNotify: typeof import('vant').showNotify
+  const showSuccessToast: typeof import('vant').showSuccessToast
+  const showToast: typeof import('vant/es').showToast
+  const storeToRefs: typeof import('pinia').storeToRefs
   const syncRef: typeof import('@vueuse/core').syncRef
   const syncRefs: typeof import('@vueuse/core').syncRefs
   const templateRef: typeof import('@vueuse/core').templateRef
