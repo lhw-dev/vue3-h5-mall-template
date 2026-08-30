@@ -27,9 +27,18 @@ export default defineConfig({
     }),
     // API自动导入，不需要手动 import ref/computed等
     AutoImport({
-      imports: ['vue', 'vue-router', 'pinia', '@vueuse/core'],
+      imports: [
+        'vue',
+        'vue-router',
+        'pinia',
+        '@vueuse/core',
+        {
+          'vue-i18n': ['useI18n'],
+        },
+      ],
       resolvers: [VantResolver()],
       dts: 'src/auto-imports.d.ts',
+      vueTemplate: true,
       eslintrc: {
         enabled: true,
       },

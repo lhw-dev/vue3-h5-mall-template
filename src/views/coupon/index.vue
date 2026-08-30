@@ -63,7 +63,7 @@ const activeTab = ref(0)
 const showReceive = ref(false)
 const availableList = ref<any[]>([])
 
-const onUseCoupon = (coupon: any) => {
+const onUseCoupon = () => {
   router.push('/')
 }
 
@@ -99,7 +99,7 @@ onMounted(async () => {
   left: 0;
   right: 0;
   padding: 5px 16px;
-  background: #fff;
+  background: var(--color-block-background);
   box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.04);
   z-index: 2;
 }

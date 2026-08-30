@@ -1,0 +1,44 @@
+{
+  "home": {
+    "title": "Home",
+    "searchPlaceholder": "Search goods",
+    "seckill": "Flash Sale",
+    "springPromo": "Spring Promotion Event",
+    "seckillZone": "Flash Sale Zone",
+    "newArrival": "New Arrivals",
+    "coupon": "Coupon",
+    "seckillEntry": "Seckill",
+    "search": "Search",
+    "order": "Orders",
+    "more": "More >"
+  },
+  "cart": {
+    "title": "Cart",
+    "empty": "Shopping cart is empty",
+    "checkout": "Checkout"
+  },
+  "user": {
+    "title": "Mine",
+    "login": "Sign In",
+    "logout": "Sign Out"
+  },
+  "goods": {
+    "addToCart": "Add to Cart",
+    "buyNow": "Buy Now",
+    "hotSale": "Hot"
+  },
+  "tabbar": {
+    "home": "Home",
+    "category": "Category",
+    "cart": "Cart",
+    "user": "Mine"
+  },
+  "mine": {
+    "setting": "Settings"
+  },
+  "setting": {
+    "title": "Settings",
+    "language": "Language",
+    "darkMode": "Dark Mode"
+  }
+}

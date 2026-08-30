@@ -79,9 +79,9 @@ const onSubmit = async () => {
 
 <style lang="scss" scoped>
 .login-page {
-  min-height: 100vh;
+  min-height: calc(100vh - 50px);
   background: #fff;
-  padding: 60px 24px 0;
+  padding: 60px 16px 0;
 }
 
 .login-header {

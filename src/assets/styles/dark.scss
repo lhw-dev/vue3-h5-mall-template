@@ -1,0 +1,27 @@
+html {
+  body {
+    color: var(--van-text-color);
+    background-color: var(--color-background-2);
+  }
+  #app {
+    background-color: var(--van-background-2);
+    min-height: 100vh;
+  }
+}
+
+html.van-theme-dark {
+  // 业务页面兜底
+  .home-page,
+  .category-page,
+  .cart-page,
+  .user-page,
+  .login-page,
+  .order-list-page,
+  .order-confirm-page,
+  .coupon-page,
+  .address-page,
+  .search-page,
+  .settings-page {
+    background-color: #121212 !important;
+  }
+}

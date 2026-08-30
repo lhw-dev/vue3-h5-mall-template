@@ -75,7 +75,7 @@ onMounted(async () => {
 
 .category-left {
   width: 100px;
-  background: #fff;
+  background: var(--color-block-background);
   overflow-y: auto;
   // 滚动平滑
   scroll-behavior: smooth;

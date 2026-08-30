@@ -4,9 +4,9 @@
     <span class="symbol">¥</span>
     <span class="integer">{{ integerPart }}</span>
     <span v-if="showDecimal" class="decimal">.{{ decimalPart }}</span>
-    <span v-if="marketPrice && showMarketPrice" class="market-price"
-      >¥{{ formatPrice(marketPrice) }}</span
-    >
+    <span v-if="marketPrice && showMarketPrice" class="market-price">{{
+      formatPrice(marketPrice)
+    }}</span>
   </span>
 </template>
 

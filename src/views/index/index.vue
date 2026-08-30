@@ -17,17 +17,20 @@
     >
       <van-swipe-item>
         <div class="banner-item banner-1">
-          <div class="banner-text">春季大促活动</div>
+          <div class="banner-text">Vue3 + Vite6 + TypeScript</div>
+          <div class="banner-subtext">极速H5工程模板</div>
         </div>
       </van-swipe-item>
       <van-swipe-item>
         <div class="banner-item banner-2">
-          <div class="banner-text">限时秒杀专区</div>
+          <div class="banner-text">Vant4 + Pinia + ofetch</div>
+          <div class="banner-subtext">MSW Mock / i18n / 暗黑模式</div>
         </div>
       </van-swipe-item>
       <van-swipe-item>
         <div class="banner-item banner-3">
-          <div class="banner-text">新品上市</div>
+          <div class="banner-text">自动路由 · 自动导入</div>
+          <div class="banner-subtext">开箱即用移动端脚手架</div>
         </div>
       </van-swipe-item>
     </van-swipe>
@@ -36,7 +39,7 @@
     <div class="home-grid">
       <van-grid :column-num="4" :border="false">
         <van-grid-item icon="coupon-o" text="优惠券" to="/coupon" />
-        <van-grid-item icon="clock-o" text="秒杀" />
+        <van-grid-item icon="clock-o" text="秒杀" @click="showToast('等你来开发!')" />
         <van-grid-item icon="search" text="搜索" to="/search" />
         <van-grid-item icon="balance-list-o" text="订单" to="/order/list" />
       </van-grid>
@@ -45,7 +48,7 @@
     <!-- 秒杀标题 -->
     <div class="home-title">
       <span class="title-text">限时秒杀</span>
-      <span class="more-text">更多 ></span>
+      <span class="more-text" @click="showToast('等你来开发!')">更多 ></span>
     </div>
 
     <!-- 商品列表 -->
@@ -121,9 +124,11 @@ $banner-height: 180px;
   width: 100%;
   height: $banner-height;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: #fff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
   font-size: 20px;
   font-weight: 600;
 
@@ -140,7 +145,7 @@ $banner-height: 180px;
 
 // 功能入口
 .home-grid {
-  background: #ffffff;
+  background: var(--color-block-background);
   margin: 10px $padding-page;
   border-radius: $radius-base;
   padding: 8px 0;
@@ -156,7 +161,6 @@ $banner-height: 180px;
   .title-text {
     font-size: 17px;
     font-weight: bold;
-    color: #222;
   }
   .more-text {
     font-size: 13px;
@@ -171,7 +175,7 @@ $banner-height: 180px;
   .goods-card {
     border-radius: $radius-base;
     margin-bottom: 10px;
-    background-color: #fff;
+    background: var(--color-block-background);
   }
 }
 

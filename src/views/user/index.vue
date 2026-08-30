@@ -18,7 +18,7 @@
     <!-- 订单入口 -->
     <div class="order-card">
       <div class="card-title" @click="$router.push('/order/list')">
-        <span>我的订单</span>
+        <span class="label">我的订单</span>
         <span class="arrow">查看全部 ></span>
       </div>
       <van-grid :column-num="4" :border="false">
@@ -48,9 +48,16 @@
     <van-cell-group class="menu-group">
       <van-cell title="收货地址" icon="location-o" is-link to="/address" />
       <van-cell title="优惠券" icon="coupon-o" is-link to="/coupon" />
-      <van-cell title="联系客服" icon="service-o" is-link />
+      <van-cell title="联系客服" icon="service-o" is-link @click="showToast('等你来开发!')" />
       <van-cell v-if="userStore.isLogin" title="退出登录" icon="close" is-link @click="onLogout" />
+      <van-cell :title="$t('mine.setting')" icon="setting-o" is-link to="/settings" />
     </van-cell-group>
+
+    <div class="page-footer-tip">
+      <div class="tip-title">Vue3-H5-Mall-Template</div>
+      <div class="tip-desc">Vite6 + Vue3.5 + TS5.7 + Vant4 + Pinia + Ofetch</div>
+      <div class="tip-version">MIT License · Hellen❧</div>
+    </div>
   </div>
 </template>
 
@@ -91,8 +98,7 @@ onMounted(async () => {
 
 <style lang="scss" scoped>
 .user-page {
-  min-height: 100vh;
-  background: #f7f8fa;
+  min-height: calc(100vh - 50px);
 }
 
 .user-header {
@@ -124,7 +130,7 @@ onMounted(async () => {
 }
 
 .order-card {
-  background: #fff;
+  background: var(--color-block-background);
   margin: 12px;
   border-radius: 10px;
   padding: 12px;
@@ -147,5 +153,25 @@ onMounted(async () => {
   margin: 12px;
   border-radius: 10px;
   overflow: hidden;
+}
+
+.page-footer-tip {
+  padding: 16px;
+  text-align: center;
+  .tip-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--van-text-color);
+  }
+  .tip-desc {
+    font-size: 12px;
+    color: var(--van-text-color-2);
+    margin-top: 4px;
+  }
+  .tip-version {
+    font-size: 11px;
+    color: var(--van-text-color-3);
+    margin-top: 4px;
+  }
 }
 </style>

@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
+import { useAppStore } from '@/store/app.store'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import { createRouter, createWebHistory } from 'vue-router'
 // vite-plugin-pages自动生成的路由
@@ -32,20 +33,20 @@ if (import.meta.env.DEV) {
 const app = createApp(App)
 const pinia = createPinia()
 pinia.use(piniaPluginPersistedstate)
+app.use(pinia)
+const appStore = useAppStore()
+appStore.setTheme(appStore.theme)
 
 // 把自动生成的routes加上layout布局
 const routes = setupLayouts(generatedRoutes)
-
 const router = createRouter({
   history: createWebHistory(),
   routes,
 })
-
 // 注册路由守卫
 setupRouterGuard(router)
-
-app.use(pinia)
 app.use(router)
+
 app.use(i18n)
 
 app.mount('#app')

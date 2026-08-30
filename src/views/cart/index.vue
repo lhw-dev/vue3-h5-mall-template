@@ -69,7 +69,6 @@ const onSubmit = () => {
 <style lang="scss" scoped>
 .cart-page {
   min-height: 100vh;
-  background: #f7f8fa;
   padding-bottom: 100px;
 }
 
@@ -77,7 +76,7 @@ const onSubmit = () => {
   display: flex;
   align-items: center;
   padding: 12px 16px;
-  background: #fff;
+  background: var(--color-block-background);
 
   .item-img {
     width: 80px;

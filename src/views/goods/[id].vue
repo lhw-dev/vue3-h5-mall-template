@@ -99,7 +99,7 @@ onMounted(async () => {
 <style lang="scss" scoped>
 .goods-page {
   padding-bottom: 50px;
-  background: #f7f8fa;
+  background: var(--color-block-background);
   min-height: 100vh;
 }
 
@@ -113,7 +113,7 @@ onMounted(async () => {
 }
 
 .goods-info {
-  background: #fff;
+  background: var(--color-block-background);
   padding: 12px 16px;
   .goods-name {
     font-size: 16px;
@@ -130,7 +130,7 @@ onMounted(async () => {
 
 .detail-block {
   margin-top: 10px;
-  background: #fff;
+  background: var(--color-block-background);
   padding: 16px;
   .block-title {
     font-size: 14px;

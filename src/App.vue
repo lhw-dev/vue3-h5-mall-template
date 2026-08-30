@@ -1,8 +1,13 @@
 <template>
-  <router-view />
+  <van-config-provider :theme="appStore.theme">
+    <router-view />
+  </van-config-provider>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useAppStore } from '@/store/app.store'
+const appStore = useAppStore()
+</script>
 
 <style>
 #app {
