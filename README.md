@@ -1,8 +1,8 @@
 # 🛒 Vue3 H5 Mall Template
 
-> 🔥 **Vue3 + Vite6 + TS + Vant4 + Pinia + ofetch 开箱即用 垂直电商 H5 工程模板**
+> 🔥 **Vue3 + Vite6 + TS + Vant4 + Pinia + ofetch 开箱即用 H5 商城模板**
 >
-> 不同于通用空模板，**内置完整电商业务 + 顶级工程化规范**，可直接用于商业二次开发 / 毕业设计 / 简历项目展示
+> 不同于通用空模板，**内置完整商城业务 + 顶级工程化规范**，可直接用于商业二次开发 / 毕业设计 / 简历项目展示
 
 [![Vue3](https://img.shields.io/badge/Vue-3.5-green.svg)](https://vuejs.org/)
 [![Vite](https://img.shields.io/badge/Vite-6.0-646CFF.svg)](https://vitejs.dev/)

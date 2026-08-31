@@ -23,11 +23,9 @@ import i18n from '@/i18n'
 import App from './App.vue'
 
 // MSW Mock仅开发环境启用
-if (import.meta.env.DEV) {
+if (import.meta.env.VITE_MOCK_ENABLE === 'true') {
   const { worker } = await import('@/mock/browser')
-  await worker.start({
-    onUnhandledRequest: 'bypass',
-  })
+  await worker.start({ onUnhandledRequest: 'bypass' })
 }
 
 const app = createApp(App)
