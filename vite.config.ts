@@ -59,7 +59,6 @@ export default defineConfig({
     }),
   ],
   build: {
-    target: 'esnext',
     outDir: 'dist',
     emptyOutDir: true,
     // 打包优化
@@ -72,7 +71,6 @@ export default defineConfig({
           vueVendor: ['vue', 'vue-router', 'pinia'],
           vant: ['vant'],
           i18n: ['vue-i18n'],
-          msw: ['msw'],
         },
         // 静态资源文件名格式化
         chunkFileNames: 'assets/js/[name]-[hash].js',

@@ -22,29 +22,33 @@ import 'vant/es/date-picker/style'
 import i18n from '@/i18n'
 import App from './App.vue'
 
-// MSW Mock仅开发环境启用
-if (import.meta.env.VITE_MOCK_ENABLE === 'true') {
-  const { worker } = await import('@/mock/browser')
-  await worker.start({ onUnhandledRequest: 'bypass' })
+async function bootstrap() {
+  // MSW Mock仅开发环境启用
+  if (import.meta.env.VITE_MOCK_ENABLE === 'true') {
+    const { worker } = await import('@/mock/browser')
+    await worker.start({ onUnhandledRequest: 'bypass' })
+  }
+
+  const app = createApp(App)
+  const pinia = createPinia()
+  pinia.use(piniaPluginPersistedstate)
+  app.use(pinia)
+  const appStore = useAppStore()
+  appStore.setTheme(appStore.theme)
+
+  // 把自动生成的routes加上layout布局
+  const routes = setupLayouts(generatedRoutes)
+  const router = createRouter({
+    history: createWebHistory(),
+    routes,
+  })
+  // 注册路由守卫
+  setupRouterGuard(router)
+  app.use(router)
+
+  app.use(i18n)
+
+  app.mount('#app')
 }
 
-const app = createApp(App)
-const pinia = createPinia()
-pinia.use(piniaPluginPersistedstate)
-app.use(pinia)
-const appStore = useAppStore()
-appStore.setTheme(appStore.theme)
-
-// 把自动生成的routes加上layout布局
-const routes = setupLayouts(generatedRoutes)
-const router = createRouter({
-  history: createWebHistory(),
-  routes,
-})
-// 注册路由守卫
-setupRouterGuard(router)
-app.use(router)
-
-app.use(i18n)
-
-app.mount('#app')
+bootstrap()
