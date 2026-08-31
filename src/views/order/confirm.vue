@@ -87,7 +87,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import { useCartStore } from '@/store/cart.store'
-import { useCouponStore } from '@/store/coupon.store'
+// import { useCouponStore } from '@/store/coupon.store'
 import { getAddressListApi } from '@/api/user'
 import { createOrderApi } from '@/api/order'
 import { getAvailableCouponApi } from '@/api/coupon'
@@ -95,7 +95,7 @@ import type { AddressItem } from '@/types/user'
 import AddressSelect from '../address/index.vue'
 
 const cartStore = useCartStore()
-const couponStore = useCouponStore()
+// const couponStore = useCouponStore()
 
 const checkoutList = computed(() => cartStore.selectedItems)
 const totalAmount = computed(() =>
@@ -143,7 +143,7 @@ const onSubmit = async () => {
     showToast('请选择收货地址')
     return
   }
-  const res = await createOrderApi({
+  await createOrderApi({
     skuIds: checkoutList.value.map(i => i.skuId),
     addressId: selectedAddress.value.id,
     couponId: selectedCouponId.value || undefined,

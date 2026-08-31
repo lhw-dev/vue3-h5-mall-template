@@ -19,7 +19,7 @@ export function useCart() {
   }) => {
     cartStore.addItem(params)
     // 可选：同步到服务端
-    // await addCartApi({ goodsId: params.goodsId, skuId: params.skuId, quantity: params.quantity })
+    await addCartApi({ goodsId: params.goodsId, skuId: params.skuId, quantity: params.quantity })
   }
 
   const toggleItemSelect = (skuId: number) => {
@@ -28,12 +28,12 @@ export function useCart() {
 
   const updateQuantity = async (skuId: number, quantity: number) => {
     cartStore.updateQuantity(skuId, quantity)
-    // await updateCartQuantityApi(skuId, quantity)
+    await updateCartQuantityApi(skuId, quantity)
   }
 
   const removeItem = async (skuId: number) => {
     cartStore.removeItem(skuId)
-    // await deleteCartApi({ skuIds: [skuId] })
+    await deleteCartApi({ skuIds: [skuId] })
   }
 
   return {

@@ -55,7 +55,7 @@
 
     <div class="page-footer-tip">
       <div class="tip-title">Vue3-H5-Mall-Template</div>
-      <div class="tip-desc">Vite6 + Vue3.5 + TS5.7 + Vant4 + Pinia + Ofetch</div>
+      <div class="tip-desc">Vite6 + Vue3.5 + TS5.9 + Vant4 + Pinia + Ofetch</div>
       <div class="tip-version">MIT License · Hellen❧</div>
     </div>
   </div>

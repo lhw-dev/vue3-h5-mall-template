@@ -58,8 +58,8 @@ const mockOrders = [
 ]
 
 export const orderHandlers = [
-  http.post('/api/order/create', async ({ request }) => {
-    const body = (await request.json()) as any
+  http.post('/api/order/create', async () => {
+    // const body = (await request.json()) as any
     const orderId = 'ORD' + Date.now()
     return HttpResponse.json({
       code: 200,

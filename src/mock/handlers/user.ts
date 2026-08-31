@@ -35,8 +35,8 @@ export const userHandlers = [
     return HttpResponse.json({ code: 200, msg: '验证码已发送', data: true })
   }),
 
-  http.post('/api/user/login', async ({ request }) => {
-    const body = (await request.json()) as any
+  http.post('/api/user/login', async () => {
+    // const body = (await request.json()) as any
     return HttpResponse.json({
       code: 200,
       msg: '登录成功',
