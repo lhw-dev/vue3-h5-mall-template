@@ -15,25 +15,25 @@ const mockGoods = [
     id: 1001,
     title: '纯棉短袖T恤',
     price: 59.9,
-    pic: 'https://picsum.photos/seed/tshirt/200/200',
+    pic: 'https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg',
   },
   {
     id: 1002,
     title: '休闲运动长裤',
     price: 89,
-    pic: 'https://picsum.photos/seed/pants/200/200',
+    pic: 'https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg',
   },
   {
     id: 1003,
     title: '轻薄防晒外套',
     price: 129,
-    pic: 'https://picsum.photos/seed/jacket/200/200',
+    pic: 'https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg',
   },
   {
     id: 1004,
     title: '简约棒球帽',
     price: 29.9,
-    pic: 'https://picsum.photos/seed/cap/200/200',
+    pic: 'https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg',
   },
 ]
 
