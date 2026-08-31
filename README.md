@@ -14,9 +14,9 @@
 
 ## 在线预览
 
-📱 **扫码体验** 或点击 [在线预览](https://your-demo-link.com)
+📱 **扫码体验** 或点击 [在线预览](https://vue3-h5-mall-template.pages.dev/)
 
-![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://your-demo-link.com)
+![QR Code](https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://vue3-h5-mall-template.pages.dev/)
 
 ## 项目特性
 
@@ -26,7 +26,7 @@
 | ----------- | ------ | ------------------------------ |
 | Vue         | 3.5.13 | 组合式 API，性能优化           |
 | Vite        | 6.0    | 极速构建，比 Vite5 更快        |
-| TypeScript  | 5.7    | 严格类型检查                   |
+| TypeScript  | 5.9    | 严格类型检查                   |
 | Vant        | 4.9    | 有赞官方移动端组件库           |
 | Pinia       | 2.3    | 状态管理 + 持久化              |
 | ofetch      | 1.4    | 现代 HTTP 请求库（替代 Axios） |
@@ -301,12 +301,6 @@ body {
 - [Pinia](https://pinia.vuejs.org/)
 - [Tailwindcss](https://tailwindcss.com/)
 - [MSW](https://mswjs.io/)
-
-## 联系方式
-
-- 作者: Hellen
-- 邮箱: your.email@example.com
-- 微信: your-wechat
 
 ---
 
