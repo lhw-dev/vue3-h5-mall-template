@@ -6,7 +6,7 @@
 
 [![Vue3](https://img.shields.io/badge/Vue-3.5-green.svg)](https://vuejs.org/)
 [![Vite](https://img.shields.io/badge/Vite-6.0-646CFF.svg)](https://vitejs.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg)](https://www.typescriptlang.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue.svg)](https://www.typescriptlang.org/)
 [![Vant](https://img.shields.io/badge/Vant-4.9-07c160.svg)](https://vant-ui.github.io/)
 [![Pinia](https://img.shields.io/badge/Pinia-2.3-yellow.svg)](https://pinia.vuejs.org/)
 [![ofetch](https://img.shields.io/badge/ofetch-1.4-000000.svg)](https://github.com/unjs/ofetch)
