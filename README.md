@@ -4,17 +4,12 @@
 >
 > 不同于通用空模板，**内置完整商城业务 + 顶级工程化规范**，可直接用于商业二次开发 / 毕业设计 / 简历项目展示
 
-[![GitHub Release](https://img.shields.io/github/v/release/lhw-dev/vue3‑h5‑mall‑template?color=orange&label=release)](https://github.com/lhw-dev/vue3‑h5‑mall‑template/releases/latest)
 [![Vue3](https://img.shields.io/badge/Vue-3.5-green.svg)](https://vuejs.org/)
 [![Vite](https://img.shields.io/badge/Vite-6.0-646CFF.svg)](https://vitejs.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg)](https://www.typescriptlang.org/)
 [![Vant](https://img.shields.io/badge/Vant-4.9-07c160.svg)](https://vant-ui.github.io/)
 [![Pinia](https://img.shields.io/badge/Pinia-2.3-yellow.svg)](https://pinia.vuejs.org/)
 [![ofetch](https://img.shields.io/badge/ofetch-1.4-000000.svg)](https://github.com/unjs/ofetch)
-[![i18n](https://img.shields.io/badge/i18n-vue--i18n‑9‑purple)](https://vue-i18n.intlify.dev/)
-[![Dark‑Mode](https://img.shields.io/badge/Dark‑Mode‑✅‑black)](#)
-[![GitHub Stars](https://img.shields.io/github/stars/lhw-dev/vue3‑h5‑mall‑template)](https://github.com/lhw-dev/vue3‑h5‑mall‑template/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/lhw-dev/vue3‑h5‑mall‑template)](https://github.com/lhw-dev/vue3‑h5‑mall‑template/fork)
 [![License](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 
 ## 在线预览
