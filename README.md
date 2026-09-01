@@ -4,12 +4,17 @@
 >
 > 不同于通用空模板，**内置完整商城业务 + 顶级工程化规范**，可直接用于商业二次开发 / 毕业设计 / 简历项目展示
 
+[![GitHub Release](https://img.shields.io/github/v/release/lhw-dev/vue3‑h5‑mall‑template?color=orange&label=release)](https://github.com/lhw-dev/vue3‑h5‑mall‑template/releases/latest)
 [![Vue3](https://img.shields.io/badge/Vue-3.5-green.svg)](https://vuejs.org/)
 [![Vite](https://img.shields.io/badge/Vite-6.0-646CFF.svg)](https://vitejs.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg)](https://www.typescriptlang.org/)
 [![Vant](https://img.shields.io/badge/Vant-4.9-07c160.svg)](https://vant-ui.github.io/)
 [![Pinia](https://img.shields.io/badge/Pinia-2.3-yellow.svg)](https://pinia.vuejs.org/)
 [![ofetch](https://img.shields.io/badge/ofetch-1.4-000000.svg)](https://github.com/unjs/ofetch)
+[![i18n](https://img.shields.io/badge/i18n-vue--i18n‑9‑purple)](https://vue-i18n.intlify.dev/)
+[![Dark‑Mode](https://img.shields.io/badge/Dark‑Mode‑✅‑black)](#)
+[![GitHub Stars](https://img.shields.io/github/stars/lhw-dev/vue3‑h5‑mall‑template)](https://github.com/lhw-dev/vue3‑h5‑mall‑template/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/lhw-dev/vue3‑h5‑mall‑template)](https://github.com/lhw-dev/vue3‑h5‑mall‑template/fork)
 [![License](https://img.shields.io/badge/License-MIT-orange.svg)](LICENSE)
 
 ## 在线预览
@@ -43,12 +48,12 @@
 - 📦 ofetch完整封装：请求拦截、token携带、重复请求取消、业务/网络错误统一toast提示
 - 🎨 **SVG 图标自动注册**，直接 `<svg-icon name="cart" />`
 - 🌓 **深色模式** 一键切换，CSS 变量驱动
-- 🌍 **i18n 国际化** 预留（可扩展多语言）
+- 🌍 **i18n 国际化** ，内置中文/英文双语切换
 - 📱 **vw移动端适配**，基于`postcss‑px‑to‑viewport‑8‑plugin`，设计稿375px
 - 🧪 **MSW Mock 数据** 开发环境零后端依赖
 - 🛡️ **ESLint + Prettier** 代码规范
 
-### 电商业务特性
+### 商城业务特性
 
 | 功能                  | 说明                               |
 | --------------------- | ---------------------------------- |
@@ -88,7 +93,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/yourname/vue3-h5-mall-template.git
+git clone https://github.com/lhw-dev/vue3-h5-mall-template.git
 cd vue3-h5-mall-template
 
 # 安装依赖
